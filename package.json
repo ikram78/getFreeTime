@@ -1,0 +1,32 @@
+{
+  "name": "getfreetime",
+  "version": "1.0.2",
+  "type": "module",
+  "description": "this will return free time ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikram78/getFreeTime.git"
+  },
+  "keywords": [
+    "get",
+    "free",
+    "time",
+    "get",
+    "free",
+    "time",
+    "slots"
+  ],
+  "author": "ikram hussain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikram78/getFreeTime/issues"
+  },
+  "homepage": "https://github.com/ikram78/getFreeTime#readme",
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}
