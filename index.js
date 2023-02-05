@@ -1,6 +1,7 @@
 import  moment from "moment";
 let dateFormat="DD-MM-YYYY HH:mm"
 
+
 const generatesSlots = (startTime, endTime, duration = 30) => {
     const timeStops = [];
     while (startTime.isSameOrBefore(endTime)) {
@@ -45,7 +46,7 @@ const generatesSlots = (startTime, endTime, duration = 30) => {
     return moment(dt, "DD-MM-YYYY").format("DD-MM-YYYY");
   }
 
-  export const getTimeSlots = (meetingArr=[], duration=30, startDate=moment().valueOf(), endDate=moment().valueOf()) => {
+   const getTimeSlots = (meetingArr=[], duration=30, startDate=moment().valueOf(), endDate=moment().valueOf()) => {
     let meetingArray = [...meetingArr];
     let timeSlotsResult = [];
     meetingArray.sort((a, b) => {
@@ -93,3 +94,4 @@ const generatesSlots = (startTime, endTime, duration = 30) => {
     console.log("Result", timeSlotsResult);
     return timeSlotsResult;
   };
+  module.exports = { getTimeSlots }
