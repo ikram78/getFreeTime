@@ -8,21 +8,21 @@ import { getTimeSlots } from 'getfreetime'
 let jsonData = [
 {
 
-      startDate: moment(
+      startDateTime: moment(
         "31-01-2023 15:20",
         "DD-MM-YYYY HH:mm"
       ).valueOf(),
-      endDate: moment(
+      endDateTime: moment(
         "31-01-2023 15:30",
         "DD-MM-YYYY HH:mm"
       ).valueOf()
     },
     {
-      startDate: moment(
+      startDateTime: moment(
         "31-01-2023 17:20",
         "DD-MM-YYYY HH:mm"
       ).valueOf(),
-      endDate: moment(
+      endDateTime: moment(
         "31-01-2023 17:50",
         "DD-MM-YYYY HH:mm"
       ).valueOf()

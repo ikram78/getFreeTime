@@ -50,7 +50,7 @@ const generatesSlots = (startTime, endTime, duration = 30) => {
     let meetingArray = [...meetingArr];
     let timeSlotsResult = [];
     meetingArray.sort((a, b) => {
-      return a.startTime - b.startTime;
+      return a.startDateTime - b.startDateTime;
     });
     if (meetingArray.length == 0) {
       let timeSlots = generatesSlots(
@@ -64,7 +64,7 @@ const generatesSlots = (startTime, endTime, duration = 30) => {
     let timeSlots = generatesSlots(
       moment(`${convertDate(startDate)} 00:00`, dateFormat),
       moment(
-        moment(meetingArray[0].startTime).format(
+        moment(meetingArray[0].startDateTime).format(
           dateFormat
         ),
         dateFormat
@@ -73,7 +73,7 @@ const generatesSlots = (startTime, endTime, duration = 30) => {
     );
     timeSlotsResult = [...timeSlots];
     meetingArray.forEach((obj, index) => {
-      let startTime = moment(obj.endTime);
+      let startTime = moment(obj.endDateTime);
       let endTime;
       let arrIndex = index + 1;
 
@@ -83,7 +83,7 @@ const generatesSlots = (startTime, endTime, duration = 30) => {
           dateFormat
         );
       } else {
-        endTime = moment(meetingArray[arrIndex].startTime);
+        endTime = moment(meetingArray[arrIndex].startDateTime);
       }
       let minuts = checkTimeBetween(startTime, endTime);
       if (minuts >= duration) {
