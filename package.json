@@ -1,6 +1,6 @@
 {
   "name": "getfreetime",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "type": "module",
   "description": "this will return free time ",
   "main": "index.js",

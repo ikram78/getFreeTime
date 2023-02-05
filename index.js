@@ -46,7 +46,7 @@ const generatesSlots = (startTime, endTime, duration = 30) => {
     return moment(dt, "DD-MM-YYYY").format("DD-MM-YYYY");
   }
 
-   const getTimeSlots = (meetingArr=[], duration=30, startDate=moment().valueOf(), endDate=moment().valueOf()) => {
+  export const getTimeSlots = (meetingArr=[], duration=30, startDate=moment().valueOf(), endDate=moment().valueOf()) => {
     let meetingArray = [...meetingArr];
     let timeSlotsResult = [];
     meetingArray.sort((a, b) => {
@@ -94,4 +94,3 @@ const generatesSlots = (startTime, endTime, duration = 30) => {
     console.log("Result", timeSlotsResult);
     return timeSlotsResult;
   };
-  module.exports = { getTimeSlots }

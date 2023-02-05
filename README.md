@@ -3,7 +3,7 @@ Get free time slots between given date range
 npm i getfreetime
 ### Usage
 ```javascript
-import { getfreetime } from 'getfreetime'
+import { getTimeSlots } from 'getfreetime'
 
 let jsonData = [
 {
@@ -33,7 +33,7 @@ let jsonData = [
 const duration=30
 const startDate=moment().valueOf()
 const endDate=moment().valueOf()
-const slots=getfreetime(jsonData,duration,startDate,endDate)
+const slots=getTimeSlots(jsonData,duration,startDate,endDate)
 ```
 #### result
 ```javascript
